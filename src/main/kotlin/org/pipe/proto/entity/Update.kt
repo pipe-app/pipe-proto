@@ -11,16 +11,16 @@ sealed class Update {
     data class UpdateProfile(val profile: Profile): Update()
 
     @Serializable
-    @SerialName("newChat")
-    data class NewChat(val chat: Chat): Update()
+    @SerialName("createChat")
+    data class CreateChat(val chat: Chat): Update()
 
     @Serializable
     @SerialName("deleteChat")
     data class DeleteChat(val chatId: Long): Update()
 
     @Serializable
-    @SerialName("newChatMessage")
-    data class NewChatMessage(val message: ChatMessage): Update()
+    @SerialName("incomeChatMessage")
+    data class IncomeChatMessage(val message: ChatMessage): Update()
 
     @Serializable
     @SerialName("deleteChatMessage")
