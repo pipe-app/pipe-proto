@@ -4,17 +4,28 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class ChatMessage(
-    val id: Long,
     val chatId: Long,
-    val senderId: Long,
     val replyTo: Long?,
     val timestamp: Long,
     val text: String
 )
 
 @Serializable
+data class SentMessage(
+    val id: Long,
+    val senderId: Long,
+    val message: ChatMessage
+)
+
+@Serializable
+data class CreateChat(
+    val partnerId: Long,
+    val message: ChatMessage
+)
+
+@Serializable
 data class Chat(
     val id: Long,
     val partnerId: Long,
-    val lastMessage: ChatMessage
+    val lastMessage: SentMessage
 )
