@@ -5,6 +5,8 @@ import kotlinx.serialization.Serializable
 @Serializable
 enum class ErrorKind {
     // Common
+    INTERNAL_ERROR,
+    UNDEFINED_ENDPOINT,
     UNAUTHORIZED,
 
     // SignIn
