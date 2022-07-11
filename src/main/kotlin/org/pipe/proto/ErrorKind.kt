@@ -17,8 +17,6 @@ enum class ErrorKind {
     USERNAME_TAKEN,
     LOGIN_INVALID,
     USERNAME_INVALID,
-    LOGIN_SIZE,
-    USERNAME_SIZE,
     PASSWORD_WEAK,
 
     // User
