@@ -3,7 +3,7 @@ package org.pipe.proto.entity
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Profile(
+data class User(
     val id: Long,
     val name: String,
     val displayName: String,

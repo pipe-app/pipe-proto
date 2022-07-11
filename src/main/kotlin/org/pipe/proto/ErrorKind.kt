@@ -20,7 +20,7 @@ enum class ErrorKind {
     USERNAME_LONG,
     PASSWORD_WEAK,
 
-    // Profile
+    // User
     USER_NOT_FOUND,
     DISPLAY_NAME_SHORT,
     DISPLAY_NAME_LONG,

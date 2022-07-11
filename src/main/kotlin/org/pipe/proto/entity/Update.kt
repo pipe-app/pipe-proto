@@ -7,8 +7,8 @@ import kotlinx.serialization.Serializable
 sealed class Update {
 
     @Serializable
-    @SerialName("updateProfile")
-    data class UpdateProfile(val profile: Profile): Update()
+    @SerialName("updateUser")
+    data class UpdateUser(val user: User): Update()
 
     @Serializable
     @SerialName("createChat")
