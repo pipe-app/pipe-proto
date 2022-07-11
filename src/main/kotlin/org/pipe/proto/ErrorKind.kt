@@ -15,7 +15,6 @@ enum class ErrorKind {
 
     // SignUp
     USERNAME_TAKEN,
-    LOGIN_INVALID,
     USERNAME_INVALID,
     PASSWORD_WEAK,
 

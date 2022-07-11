@@ -5,15 +5,8 @@ import org.pipe.proto.UuidSerializer
 import java.util.UUID
 
 @Serializable
-data class SignUpRequest(
-    val login: String,
-    val password: String,
-    val username: String
-)
-
-@Serializable
-data class SignInRequest(
-    val login: String,
+data class LoginRequest(
+    val username: String,
     val password: String
 )
 
