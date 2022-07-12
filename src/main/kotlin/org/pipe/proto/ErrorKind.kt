@@ -8,6 +8,7 @@ enum class ErrorKind {
     INTERNAL_ERROR,
     UNDEFINED_ENDPOINT,
     UNAUTHORIZED,
+    ACCESS_DENIED,
     INVALID_ARGS,
 
     // SignIn

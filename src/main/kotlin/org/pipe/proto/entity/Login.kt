@@ -12,6 +12,7 @@ data class LoginRequest(
 
 @Serializable
 data class LoginResponse(
+    val userId: Long,
     @Serializable(with = UuidSerializer::class)
     val accessToken: UUID
 )
