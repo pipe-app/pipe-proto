@@ -20,7 +20,7 @@ sealed class Update {
 
     @Serializable
     @SerialName("incomeChatMessage")
-    data class IncomeChatMessage(val message: ChatMessage): Update()
+    data class IncomeChatMessage(val message: SentMessage): Update()
 
     @Serializable
     @SerialName("deleteChatMessage")
