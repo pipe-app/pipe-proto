@@ -8,6 +8,7 @@ enum class ErrorKind {
     INTERNAL_ERROR,
     UNDEFINED_ENDPOINT,
     UNAUTHORIZED,
+    INVALID_ARGS,
 
     // SignIn
     INVALID_LOGIN,
@@ -21,4 +22,7 @@ enum class ErrorKind {
     // User
     USER_NOT_FOUND,
     DISPLAY_NAME_SIZE,
+
+    // Chat
+    CHAT_NOT_FOUND,
 }
