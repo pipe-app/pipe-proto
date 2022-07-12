@@ -6,7 +6,6 @@ import kotlinx.serialization.Serializable
 data class ChatMessage(
     val chatId: Long,
     val replyTo: Long?,
-    val timestamp: Long,
     val text: String
 )
 
@@ -14,6 +13,7 @@ data class ChatMessage(
 data class SentMessage(
     val id: Long,
     val senderId: Long,
+    val timestamp: Long,
     val message: ChatMessage
 )
 
