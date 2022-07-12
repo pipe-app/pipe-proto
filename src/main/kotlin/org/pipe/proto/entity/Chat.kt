@@ -20,7 +20,7 @@ data class SentMessage(
 @Serializable
 data class CreateChat(
     val partnerId: Long,
-    val message: ChatMessage
+    val message: String
 )
 
 @Serializable
