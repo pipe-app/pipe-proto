@@ -26,6 +26,6 @@ data class CreateChat(
 @Serializable
 data class Chat(
     val id: Long,
-    val partnerId: Long,
+    val partner: User,
     val lastMessage: SentMessage
 )
