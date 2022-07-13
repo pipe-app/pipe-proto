@@ -26,4 +26,5 @@ enum class ErrorKind {
 
     // Chat
     CHAT_NOT_FOUND,
+    MESSAGE_NOT_FOUND,
 }
