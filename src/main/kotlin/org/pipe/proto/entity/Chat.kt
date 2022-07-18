@@ -3,30 +3,30 @@ package org.pipe.proto.entity
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class ChatMessage(
+data class ChatMessageDto(
     val chatId: Long,
     val replyTo: Long?,
     val text: String
 )
 
 @Serializable
-data class SentMessage(
+data class SentMessageDto(
     val id: Long,
     val senderId: Long,
     val timestamp: Long,
-    val message: ChatMessage
+    val message: ChatMessageDto
 )
 
 @Serializable
-data class CreateChat(
+data class CreateChatRequest(
     val partnerId: Long,
     val message: String
 )
 
 @Serializable
-data class Chat(
+data class ChatDto(
     val id: Long,
     val firstUser: Long,
     val secondUser: Long,
-    val lastMessage: SentMessage
+    val lastMessage: SentMessageDto
 )

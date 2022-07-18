@@ -5,7 +5,7 @@ import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Test
 import org.pipe.proto.entity.Chat
 import org.pipe.proto.entity.ChatMessage
-import org.pipe.proto.entity.Update
+import org.pipe.proto.entity.UpdateDto
 
 class SerializationTest {
 
@@ -23,7 +23,7 @@ class SerializationTest {
     @Test
     fun testUpdate() {
         val msg = ChatMessage(7777,8888,9999,2222, 784165114, "Test text")
-        val newMessage: Update = Update.NewChatMessage(msg)
+        val newMessage: UpdateDto = UpdateDto.NewChatMessage(msg)
         val json = Json.encodeToString(newMessage)
 
         println(json)
