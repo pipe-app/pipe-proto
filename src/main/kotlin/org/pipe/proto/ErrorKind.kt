@@ -19,6 +19,7 @@ enum class ErrorKind {
     USERNAME_TAKEN,
     USERNAME_INVALID,
     PASSWORD_WEAK,
+    PASSWORD_MISMATCH,
 
     // User
     USER_NOT_FOUND,
