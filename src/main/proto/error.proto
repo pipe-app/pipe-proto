@@ -1,0 +1,30 @@
+syntax = "proto3";
+package pipe;
+option java_package = "org.pipeapp.proto";
+
+enum ErrorKind {
+  // Common
+  INTERNAL_ERROR = 0;
+  UNDEFINED_ENDPOINT = 1;
+  UNAUTHORIZED = 2;
+  ACCESS_DENIED = 3;
+  INVALID_ARGS = 4;
+
+  // SignIn
+  INVALID_LOGIN = 5;
+  INVALID_PASSWORD = 6;
+
+  // SignUp
+  USERNAME_TAKEN = 7;
+  USERNAME_INVALID = 8;
+  PASSWORD_WEAK = 9;
+  PASSWORD_MISMATCH = 10;
+
+  // User
+  USER_NOT_FOUND = 11;
+  DISPLAY_NAME_SIZE = 12;
+
+  // Chat
+  CHAT_NOT_FOUND = 13;
+  MESSAGE_NOT_FOUND = 14;
+}

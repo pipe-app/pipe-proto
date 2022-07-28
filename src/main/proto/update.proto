@@ -1,0 +1,22 @@
+syntax = "proto3";
+package pipe;
+option java_package = "org.pipeapp.proto";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+import "user.proto";
+import "chat.proto";
+
+message Update {
+  oneof update {
+    pipe.UserData updateUser = 1;
+    pipe.ChatData createChat = 2;
+    google.protobuf.Int64Value deleteChat = 3;
+    pipe.SentMessage incomeMessage = 4;
+    google.protobuf.Int64Value deleteMessage = 5;
+  }
+}
+
+service UpdateService {
+  rpc onUpdate (google.protobuf.Empty) returns (stream Update);
+}
