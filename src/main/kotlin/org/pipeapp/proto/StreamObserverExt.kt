@@ -1,7 +1,6 @@
 package org.pipeapp.proto
 
 import io.grpc.Status.Code
-import io.grpc.StatusException
 import io.grpc.protobuf.lite.ProtoLiteUtils
 import io.grpc.stub.StreamObserver
 
@@ -10,11 +9,11 @@ val ERROR_KEY: io.grpc.Metadata.Key<ProtoError> = io.grpc.Metadata.Key.of(
     ProtoLiteUtils.metadataMarshaller(ProtoError.getDefaultInstance())
 )
 
-fun StreamObserver<*>.onError(kind: ErrorKind, code: Code = Code.CANCELLED): StatusException {
+fun StreamObserver<*>.onError(kind: ErrorKind, code: Code = Code.CANCELLED) {
     val meta = io.grpc.Metadata()
     meta.put(ERROR_KEY, ProtoError.newBuilder()
         .setKind(kind)
         .build())
 
-    return code.toStatus().asException(meta)
+    onError(code.toStatus().asException(meta))
 }
