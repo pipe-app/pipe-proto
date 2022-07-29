@@ -11,7 +11,8 @@ message LoginRequest {
 
 message LoginResponse {
   int64 userId = 1;
-  bytes accessToken = 2;
+  int64 tokenLsb = 2;
+  int64 tokenMsb = 3;
 }
 
 service LoginService {
