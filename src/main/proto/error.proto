@@ -1,6 +1,7 @@
 syntax = "proto3";
 package pipe;
 option java_package = "org.pipeapp.proto";
+option java_multiple_files = true;
 
 enum ErrorKind {
   // Common
@@ -27,4 +28,8 @@ enum ErrorKind {
   // Chat
   CHAT_NOT_FOUND = 13;
   MESSAGE_NOT_FOUND = 14;
+}
+
+message ProtoError {
+  ErrorKind kind = 1;
 }

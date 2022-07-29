@@ -1,6 +1,7 @@
 syntax = "proto3";
 package pipe;
 option java_package = "org.pipeapp.proto";
+option java_multiple_files = true;
 
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";

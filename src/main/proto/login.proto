@@ -1,8 +1,10 @@
 syntax = "proto3";
 package pipe;
 option java_package = "org.pipeapp.proto";
+option java_multiple_files = true;
 
 import "google/protobuf/empty.proto";
+import "types.proto";
 
 message LoginRequest {
   string username = 1;
@@ -11,8 +13,7 @@ message LoginRequest {
 
 message LoginResponse {
   int64 userId = 1;
-  int64 tokenLsb = 2;
-  int64 tokenMsb = 3;
+  Uuid accessToken = 2;
 }
 
 service LoginService {

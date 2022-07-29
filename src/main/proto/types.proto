@@ -1,0 +1,9 @@
+syntax = "proto3";
+package pipe;
+option java_package = "org.pipeapp.proto";
+option java_multiple_files = true;
+
+message Uuid {
+  int64 lsb = 1; // Least significant bits
+  int64 msb = 2; // Most significant bits
+}
